@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+@use "setting" as set; // 세팅
+
+/* 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: set.$fontColor;
+}
+
+html {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0px;
+  line-height: 17px;
+  background: set.$bodyColor;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  // color: blue; // 링크 체크용 -- 추후삭제
+}
+
+/* 레이아웃 */
+.notice-bar {
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+  background: #000;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background: #fff;
+  border-bottom: 1px solid set.$borderColor;
+}
+
+.logo {
+  font-size: 46px;
+  font-weight: bold;
+  color: set.$highlightColor;
+}
+
+.search-bar {
+  // flex: 1;
+  width: 35%;
+  margin: 0 10px;
+  padding: 8px;
+  border: 1px solid set.$borderColor;
+  border-radius: 4px;
+}
+
+.login-btn {
+  background: set.$highlightColor;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  font-size: 14px;
+  border-bottom: 1px solid set.$borderColor;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+  width: 130px;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.submenu {
+  padding: 0;
+  min-width: 130px;
+  list-style: none;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 
+    height 0.3s ease-out, 
+    opacity 0.3s ease-out, 
+    transform 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* 서브메뉴 항목 스타일 */
+.submenu li {
+  padding: 8px 12px;
+}
+
+.submenu li a {
+  font-weight: normal;
+  width: 100%;
+}
+
+.submenu li:hover {
+  background: set.$semiHighlightColor;
+}
+
+/* 마우스 호버 시 서브메뉴 표시 */
+.nav-bar:hover .submenu {
+  height: auto;
+  padding: 10px 0;
+  opacity: 1;
+  overflow: visible;
+  transform: translateY(0);
+}
+
+footer {
+  width: 100%;
+  background-color: #f1f1f1;
+
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  //   position: relative;
+  //   bottom: 0;
+}
