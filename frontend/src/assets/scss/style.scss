@@ -107,16 +107,16 @@ a {
   position: absolute;
   list-style: none;
   opacity: 0;
+  visibility: hidden;
   min-width: 130px;
   transform: translateY(-10px);
-  transition: height 0.3s ease-out, opacity 0.1s ease-out,
+  transition: height 0.3s ease-out, opacity 0.3s ease-out,
     transform 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .nav-bar-back {
   opacity: 0;
   transition: opacity 0.3s ease-out;
-  border-bottom: 1px solid set.$borderColor;
 }
 
 /* 서브메뉴 항목 스타일 */
@@ -137,6 +137,7 @@ a {
 .nav-bar:hover .submenu {
   padding: 10px 0;
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
 }
 
@@ -148,6 +149,7 @@ a {
   background-color: #fff;
   height: 350px;
   transform: translateY(0);
+  border-bottom: 1px solid set.$borderColor;
 }
 
 .content {
