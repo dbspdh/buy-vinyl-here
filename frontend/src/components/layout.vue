@@ -16,9 +16,14 @@
 
     <!-- 네비게이션바 -->
     <nav class="nav-bar">
+      <div class="nav-bar-back"></div>
       <ul class="nav-links">
-        <li class="menu-item"><a href="#">BEST</a></li>
-        <li class="menu-item"><a href="#">NEW</a></li>
+        <li class="menu-item">
+          <a href="#">BEST</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">NEW</a>
+        </li>
         <li>|</li>
         <li class="menu-item">
           <a href="#">국내</a>
@@ -64,17 +69,13 @@
     </nav>
   </header>
 
-  <body>
-    <div>
-      <router-view></router-view>
-    </div>
-  </body>
+  <main class="content">
+    <router-view></router-view>
+  </main>
 
   <footer class="footer">&copy;dbspdh</footer>
 </template>
 
 <script></script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
