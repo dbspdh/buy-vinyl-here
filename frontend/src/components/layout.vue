@@ -46,7 +46,6 @@
             <li><a href="#">일렉트로니카</a></li>
             <li><a href="#">랩/힙합</a></li>
             <li><a href="#">R&B/Soul</a></li>
-            <li><a href="#">트로트</a></li>
             <li><a href="#">포크/블루스/컨트리</a></li>
           </ul>
         </li>
@@ -78,4 +77,12 @@
 
 <script></script>
 
-<style lang="scss"></style>
+<style lang="scss">
+main{
+  width: 100%;
+  padding: 0 60px 0 60px;
+  display: flex;
+  justify-content: center;
+}
+
+</style>
